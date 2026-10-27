@@ -1,13 +1,22 @@
-This is a test project. 
+toolshop-tests
 
-On test site, which demonstrates skills, playwright, UI tests and API tests for tool shop. 
+UI and API tests for the Toolshop demo web shop, written in TypeScript with Playwright.
 
-There are several folders. 
+Project structure
+tests/ui – UI tests (login, search, product details)
+tests/api – API tests (auth, products)
+pages – Page Objects for UI tests
+api – API clients (AuthApi, ProductsApi)
+fixtures – custom Playwright fixtures (pages and API clients for tests)
+data – test data (users)
+types – TypeScript types for API responses
 
-First of all, tests. Inside of it, there are two folders, UI and API, for different types of tests. Then there are folder pages, which describes pages according to page object model. Then there is folder API with API tests. There is folder data with all needed data. And there is folder fixtures. 
-
-To run tests, please use next commands.
+How to run
 
 npm ci
 npx playwright install
 npx playwright test
+
+Open the HTML report after a run:
+
+npx playwright show-report
