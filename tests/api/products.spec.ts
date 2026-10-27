@@ -35,5 +35,5 @@ test('GET /products/search hammer returns products containing "hammer"', async (
 test('GET /products/:id with unknown id returns 404', async ({ productsApi }) => {
     const response = await productsApi.getById('999888777');
 
-    expect(response.status()).toBe(400);
+    expect(response.status()).toBe(404);
 });
