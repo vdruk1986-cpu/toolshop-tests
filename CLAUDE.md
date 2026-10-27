@@ -35,3 +35,4 @@ npx playwright show-report
 - Never hardcode credentials in specs; take test users from `data/users.ts`.
 - New page objects and API clients must come through fixtures, never `new` in a spec.
 - Before saying "done", run the tests you changed and show the result.
+- Never weaken a test to make it green (no wider locators, removed assertions, .skip, longer timeouts). If you can't make it pass honestly, stop and report what you tried.

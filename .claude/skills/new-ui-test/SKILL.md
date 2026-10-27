@@ -9,3 +9,5 @@ description: Use when asked to add a new Playwright UI test for the Toolshop sit
 5. Assertions: check the real result (for example, the product list), not only the input echo.
 6. Run `npx playwright test tests/ui/<file> --project=ui --repeat-each=3`. Fix until green 3 times.
 7. Report: what the test checks and the run result.
+
+8. If a locator is not found: read error-context.md or the trace to find the real element. If you still can't find it, stop and ask me. Do not guess further.
