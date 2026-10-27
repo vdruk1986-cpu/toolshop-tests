@@ -2,9 +2,11 @@ import { Page, Locator} from '@playwright/test';
 
 export class HomePage {
     readonly productNames: Locator;
+    readonly noResults: Locator;
 
     constructor(private page: Page) {
         this.productNames = page.getByTestId('product-name');
+        this.noResults = page.getByTestId('no-results');
     }
 
     async open() {

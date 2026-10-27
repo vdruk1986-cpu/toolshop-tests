@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if grep -rn 'waitForTimeout' tests pages; then echo 'waitForTimeout is forbidden, use web-first assertions' >&2; exit 2; fi"
+          }
+        ]
+      }
+    ]
+  }
+}
