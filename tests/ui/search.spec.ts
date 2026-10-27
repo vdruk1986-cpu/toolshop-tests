@@ -9,3 +9,11 @@ test('search returns only products matching the query', async ({ homePage }) => 
     await expect(name).toContainText(/hammer/i);
   }
 });
+
+test('search for a non-existent product shows no results message', async ({ homePage }) => {
+  await homePage.open();
+  await homePage.search('nonexistentproduct12345');
+
+  await expect(homePage.noResults).toHaveText(/no products found/i);
+  await expect(homePage.productNames).toHaveCount(0);
+});
