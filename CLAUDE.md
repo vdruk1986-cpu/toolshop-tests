@@ -36,3 +36,4 @@ npx playwright show-report
 - New page objects and API clients must come through fixtures, never `new` in a spec.
 - Before saying "done", run the tests you changed and show the result.
 - Never weaken a test to make it green (no wider locators, removed assertions, .skip, longer timeouts). If you can't make it pass honestly, stop and report what you tried.
+- Before running a shell command that is not in the allow list, explain in one line what it does and why.

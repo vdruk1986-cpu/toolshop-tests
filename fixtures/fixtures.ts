@@ -5,6 +5,7 @@ import { ProductsApi } from '../api/ProductsApi';
 import { AccountPage } from '../pages/AccountPage';
 import { AuthApi } from '../api/AuthApi';
 import { ProductPage } from '../pages/ProductPage';
+import { CartPage } from '../pages/CartPage';
 
 type Fixtures = {
   homePage: HomePage;
@@ -13,6 +14,7 @@ type Fixtures = {
   authApi: AuthApi;
   accountPage: AccountPage;
   productPage: ProductPage;
+  cartPage: CartPage;
 };
 
 export const test = base.extend<Fixtures>({
@@ -29,6 +31,10 @@ export const test = base.extend<Fixtures>({
 
   productPage: async ({ page }, use) => {
     await use(new ProductPage(page));
+  },
+
+  cartPage: async ({ page }, use) => {
+    await use(new CartPage(page));
   },
 
   productsApi: async ({ playwright }, use) => {
